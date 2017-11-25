@@ -106,7 +106,7 @@ if ($type == 'teams') {
     for ($i = 0; $i < $NUM_COMMON_TEAMS+$NUM_OTHER_TEAMS; $i++) {
         $description = $faker->realText();
         $created = $faker->dateTime;
-        $icon = 'http://helit.tech/assets/imgs/bzflag_icon.png';
+        $icon = 'http://helit.org/assets/imgs/bzflag_icon.png';
 
         $duc->prepare("INSERT INTO teams_profile VALUES (null, ?,0,0,0,?,?,?,?)")
             ->execute([$i+1, $description, $description, $icon, ft($created)]);
